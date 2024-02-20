@@ -1,7 +1,6 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const SocialLinks = () => {
   const links = [
@@ -9,7 +8,7 @@ const SocialLinks = () => {
       id: 1,
       child: (
         <>
-           <FaLinkedin size={30} />LinkedIn
+          <FaLinkedin size={30} />LinkedIn
         </>
       ),
       href: "https://linkedin.com",
@@ -19,7 +18,7 @@ const SocialLinks = () => {
       id: 2,
       child: (
         <>
-          <FaGithub size={30} />GitHub 
+          <FaGithub size={30} />GitHub
         </>
       ),
       href: "https://github.com/patelparth3943",
@@ -28,7 +27,7 @@ const SocialLinks = () => {
       id: 3,
       child: (
         <>
-           <HiOutlineMail size={30} />Mail
+          <HiOutlineMail size={30} />Mail
         </>
       ),
       href: "mailto:patelarjun3943@gmail.com",
@@ -37,23 +36,33 @@ const SocialLinks = () => {
       id: 4,
       child: (
         <>
-           <BsFillPersonLinesFill size={30} />Resume
+          <FaInstagram size={30} />Instagram
         </>
       ),
-      href: "./assest/resume.pdf",
-      style: "rounded-bl-md",
-      download: true,
+      href: "https://www.instagram.com/parthpatel_2025/",
+
     },
+    {
+      id: 5,
+      child: (
+        <>
+          <FaFacebook size={30} />Facebook
+        </>
+      ),
+      href: "https://www.facebook.com/parthpatel3943",
+      style: "rounded-bl-md",
+    },
+
   ];
 
   return (
     <div className="hidden lg:flex flex-col  top-[35%] right-0 fixed">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
+        {links.map(({ id, child, href, style }) => (
           <li
             key={id}
             className={
-              "flex justify-between items-center w-40 h-14 px-4 mr-[-100px] hover:mr-[-10px] hover:rounded-md duration-300 bg-gray-500" +
+              "flex justify-between items-center w-40 h-14 px-4 mr-[-100px] hover:bg-slate-700 hover:mr-[-10px]  duration-300 bg-gray-500" +
               " " +
               style
             }
@@ -61,9 +70,8 @@ const SocialLinks = () => {
             <a
               href={href}
               className="flex justify-between items-center w-full text-white"
-              download={download}
-              target="_blank"
-              rel="noreferrer"
+          
+              
             >
               {child}
             </a>
