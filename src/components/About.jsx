@@ -1,3 +1,4 @@
+import { MdOutlineArrowDownward } from "react-icons/md";
 
 import React from 'react';
 
@@ -30,11 +31,13 @@ const About = () => {
           <a
             href="/resume.pdf"
             download="resume.pdf"
-            className=" font-bold text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            className="group font-bold text-xl text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
 
           >
-            Download
-
+            Resume
+            <span className="group-hover:animate-bounce bold duration-300">
+              <MdOutlineArrowDownward size={25} className="ml-1" />
+            </span>
           </a>
 
         </div>
