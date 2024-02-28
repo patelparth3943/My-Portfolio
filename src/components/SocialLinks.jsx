@@ -39,7 +39,7 @@ const SocialLinks = () => {
           <FaInstagram size={30} />Instagram
         </>
       ),
-      href: "https://www.facebook.com/parthpatel3943",
+      href: "https://www.instagram.com/parthpatel_2025/",
 
     },
     {
