@@ -16,8 +16,8 @@ const Home = () => {
                     </h2>
                     <p className="text-gray-500 py-4 max-w-md text-justify">
                     👋 Hello, I'm Parth Patel. I love to work on web application using technologies like
-                        React, Tailwind. My journey in web development has equipped me with expertise in 
-                        front-end technologies like HTML, CSS, and JavaScript, as well as i'm working on backend in Next.js
+                        React, Tailwindcss. My journey in web development has equipped me with expertise in 
+                        front-end technologies like HTML, CSS, and JavaScript.
                     </p>
 
                     <div>
