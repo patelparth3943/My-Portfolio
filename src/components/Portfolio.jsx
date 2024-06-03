@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import industrial  from "../assets/portfolio/industrial.png";
 import ml from "../assets/portfolio/ml.png";
@@ -36,19 +37,17 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+            <div key={id} className="shadow-md object-scale-down  shadow-gray-600 rounded-lg">
               <img
                 src={src}
-                alt=""
-                className="rounded-md h-18  duration-200 hover:scale-105"
+                alt="image"
+                className="rounded-md h-40 w-full backdrop-blur-sm duration-200 hover:scale-105 hover:"
               />
-              <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4  duration-200 hover:scale-105">
-                  Demo
-                </button>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+              <div className="flex justify-center">
+                
+                <a href="https://github.com/patelparth3943?tab=repositories" className="flex justify-center cursor-pointer hover:bg-slate-700 w-1/2 px-3 py-2 m-4 duration-200 hover:scale-105 rounded-md">
                   Code
-                </button>
+                </a>
               </div>
             </div>
           ))}
