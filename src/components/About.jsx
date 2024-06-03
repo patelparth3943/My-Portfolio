@@ -2,13 +2,22 @@ import { MdOutlineArrowDownward } from "react-icons/md";
 import React from 'react';
 
 const About = () => {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Parth_Patel_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div
       name="about"
       className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-        <div className="pb-2 sm:pt-0 pt-60 ">
+        <div className="pb-2 sm:pt-0 pt-60">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             About
           </p>
@@ -22,16 +31,15 @@ const About = () => {
           </p>
         </div>
         <div className="flex mt-3">
-          <a 
-            href="/path/to/resume.pdf" 
-            download="Parth_Patel_Resume.pdf"
+          <button 
+            onClick={handleDownload}
             className="group font-bold text-xl text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
           >
             Resume
             <span className="group-hover:animate-bounce bold duration-300">
               <MdOutlineArrowDownward size={25} className="ml-1" />
             </span>
-          </a>
+          </button>
         </div>
       </div>
     </div>
