@@ -27,11 +27,10 @@ const About = () => {
           </p>
 
         </div>
-        <div className="flex  mt-3">
             <a 
             href="https://drive.google.com/file/d/1LebCYPojzfnZ7t1YuKRCYTNjum7oJQsn/view?usp=drive_link"
             download="resume.pdf"
-            className="group font-bold text-xl text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+            className="group mt-3  font-bold text-xl text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
 
           >
             Resume
@@ -40,7 +39,6 @@ const About = () => {
             </span>
         </a>
 
-        </div>
       </div>
     </div>
   );
