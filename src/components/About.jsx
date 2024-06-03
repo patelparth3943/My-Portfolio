@@ -28,7 +28,8 @@ const About = () => {
 
         </div>
         <div className="flex  mt-3">
-          <a
+          <object>
+            <a 
             href="/resume.pdf"
             download="resume.pdf"
             className="group font-bold text-xl text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
@@ -38,7 +39,8 @@ const About = () => {
             <span className="group-hover:animate-bounce bold duration-300">
               <MdOutlineArrowDownward size={25} className="ml-1" />
             </span>
-          </a>
+        </a>
+          </object>
 
         </div>
       </div>
