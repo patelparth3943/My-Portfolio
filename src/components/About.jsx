@@ -1,4 +1,4 @@
-import { MdOutlineArrowDownward } from "react-icons/md";
+// import { MdOutlineArrowDownward } from "react-icons/md";
 
 import React from 'react';
 
@@ -34,9 +34,9 @@ const About = () => {
 
           >
             Resume
-            <span className="group-hover:animate-bounce bold duration-300">
+            {/* <span className="group-hover:animate-bounce bold duration-300">
               <MdOutlineArrowDownward size={25} className="ml-1" />
-            </span>
+            </span> */}
         </a>
 
       </div>
