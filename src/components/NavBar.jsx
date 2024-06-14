@@ -42,17 +42,17 @@ const NavBar = () => {
 
       <div
         onClick={toggleNav}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+        className="cursor-pointer pr-4 z-10 text-white-500 md:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-start items-center absolute top-20 rounded-b-2xl right-0 w-80 h-100 bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className=" flex flex-col justify-between items-center absolute top-20 rounded-b-2xl right-0 w-80 pb-3 min-h-80 bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className=" cursor-pointer font-bold capitalize  text-3xl"
             >
               <ScrollLink
                 onClick={toggleNav}
