@@ -20,7 +20,7 @@ const About = () => {
             code tells a story of innovation and excellence. Welcome to the world of Parth Patel, where coding meets creativity!
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-start">
           <a 
             href="https://drive.google.com/file/d/1LebCYPojzfnZ7t1YuKRCYTNjum7oJQsn/view?usp=drive_link"
             target="_blank"
