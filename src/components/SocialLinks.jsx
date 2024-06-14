@@ -11,7 +11,7 @@ const SocialLinks = () => {
           <FaLinkedin size={30} />LinkedIn
         </>
       ),
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/parth-patel-033a581b7/",
       style: "rounded-tl-md",
     },
     {
@@ -30,7 +30,7 @@ const SocialLinks = () => {
           <HiOutlineMail size={30} />Mail
         </>
       ),
-      href: "mailto:patelarjun3943@gmail.com",
+      href: "mailto:patelparth3943@gmail.com",
     },
     {
       id: 4,
