@@ -3,6 +3,10 @@ import React from "react";
 import industrial  from "../assets/portfolio/industrial.png";
 import ml from "../assets/portfolio/ml.png";
 import hms from "../assets/portfolio/hms.png";
+import {  motion } from "framer-motion";
+
+
+
 
 
 const Portfolio = () => {
@@ -22,8 +26,22 @@ const Portfolio = () => {
     
   ];
 
-  return (
-    <div
+    
+
+const portvarient ={
+  hidden:{
+    opacity:0,
+    scale:0.50
+  },
+  visible:{
+    opacity:1,
+    scale:1,
+  },
+  
+}
+    
+   return (
+    <div 
       name="portfolio"
       className="bg-gradient-to-b from-black to-gray-800 w-full text-white lg:h-screen"
     >
@@ -34,10 +52,19 @@ const Portfolio = () => {
           </p>
           <p className="py-6">Check out some of my work right here</p>
         </div>
-
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src }) => (
-            <div key={id} className="shadow-md object-scale-down  shadow-gray-600 rounded-lg">
+            <motion.div  
+            variants={portvarient}
+ 
+            initial="hidden"
+            whileInView="visible"
+            transition={{
+              type:'spring', 
+              stiffness:30,
+              delay:id*0.2,
+              duration:1}}
+             key={id} className="shadow-md object-scale-down  shadow-gray-600 rounded-lg">
               <img
                 src={src}
                 alt="image"
@@ -49,7 +76,7 @@ const Portfolio = () => {
                   Code
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

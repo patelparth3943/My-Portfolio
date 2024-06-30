@@ -6,6 +6,8 @@ import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
+import { motion } from "framer-motion";
+
 
 const Experience = () => {
   const techs = [
@@ -48,19 +50,39 @@ const Experience = () => {
       style: "shadow-gray-400",
     },
   ];
+  const varient = {
+    hidden: {
+      opacity: 0,
+      x: "-100vw"
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
 
+
+    }
+  }
   return (
     <div
       name="experience"
       className="bg-gradient-to-b from-gray-800 to-black w-full "
     >
       <div className="pt-40 sm:pt-0 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-        <div>
+        <motion.div
+        variants={varient}
+        initial="hidden"
+        whileInView="visible"
+        transition={{
+          type: 'spring',
+          stiffness: 30,
+          delay: 0.3, duration: 1
+        }}>
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </p>
           <p className="py-6">These are the technologies I've worked with</p>
-        </div>
+        </motion.div>
+
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
