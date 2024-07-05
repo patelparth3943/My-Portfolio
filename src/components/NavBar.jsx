@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link, Link as ScrollLink } from "react-scroll";
+import {  Link as ScrollLink } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NavBar = ({ showPreloader }) => {
