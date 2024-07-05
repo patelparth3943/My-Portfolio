@@ -52,22 +52,22 @@ const NavBar = ({ showPreloader }) => {
 
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white z-50 bg-black fixed">
-      <div onClick={showPreloader}>
-        <motion.h1  
+      <div>
+        <ScrollLink to="home" smooth duration={500} offset={-20}>
+          <motion.h1  
           variants={navvarient}
           initial="hidden"
           animate="visible"
           transition={{
-            type: 'spring', 
-            stiffness: 30,
-            delay: 0.3, duration: 1
-          }}
-          className="cursor-pointer text-5xl font-signature ml-2"
-        >
-          Parth<span className="text-blue-500">.</span>
-        </motion.h1>
+            type:'spring', 
+            stiffness:30,
+          delay:0.3,duration:1}}
+          
+          className="cursor-pointer text-5xl font-signature ml-2">
+         Parth<span className="text-blue-500">.</span>
+          </motion.h1>
+        </ScrollLink>
       </div>
-
       <motion.ul className="hidden md:flex">
         {links.map(({ id, link }) => (
           <motion.li
