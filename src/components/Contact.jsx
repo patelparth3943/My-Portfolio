@@ -1,6 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 
 const Contact = () => {
+  const varient ={
+    hidden:{
+      opacity:0,
+      x:-50
+    },
+    visible:{
+      opacity:1,
+      x:0,
+    }
+  }
+  const varient2 ={
+    hidden:{
+      opacity:0,
+      x:50
+    },
+    visible:{
+      opacity:1,
+      x:0,
+    }
+  }
   return (
     <div
       name="contact"
@@ -14,7 +36,15 @@ const Contact = () => {
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className=" flex justify-center items-center">
+        <motion.div
+         variants={varient}
+         initial="hidden"
+         whileInView="visible"
+         transition={{
+           type:'spring', 
+           stiffness:30,
+         delay:0.3,duration:1}}
+        className=" flex justify-center items-center">
           <form
             action="https://getform.io/f/qaQYDYan"
             method="POST"
@@ -39,11 +69,19 @@ const Contact = () => {
               className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
 
-            <button className="font-bold text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <motion.button 
+             variants={varient2}
+             initial="hidden"
+             whileInView="visible"
+             transition={{
+               type:'spring', 
+               stiffness:30,
+             delay:0.3,duration:1}}
+            className="font-bold text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
               Let's talk
-            </button>
+            </motion.button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

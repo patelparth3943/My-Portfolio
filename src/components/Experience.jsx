@@ -53,7 +53,19 @@ const Experience = () => {
   const varient = {
     hidden: {
       opacity: 0,
-      x: "-100vw"
+      x: 250
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+
+
+    }
+  }
+  const varient2 = {
+    hidden: {
+      opacity: 0,
+      x: -250
     },
     visible: {
       opacity: 1,
@@ -69,14 +81,7 @@ const Experience = () => {
     >
       <div className="pt-40 sm:pt-0 max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <motion.div
-        variants={varient}
-        initial="hidden"
-        whileInView="visible"
-        transition={{
-          type: 'spring',
-          stiffness: 30,
-          delay: 0.3, duration: 1
-        }}>
+        >
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
             Experience
           </p>
@@ -84,15 +89,36 @@ const Experience = () => {
         </motion.div>
 
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
+        <div
+       
+        className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
           {techs.map(({ id, src, title, style }) => (
-            <div
+           <div
+         
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={`shadow-md hover:scale-105 duration-500 py-8 rounded-lg ${style}`}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
-            </div>
+              <motion.img
+                variants={varient}
+                initial="hidden"
+                whileInView="visible"
+                transition={{
+                  type: 'spring',
+                  stiffness: 25,
+                  delay: 0.1, duration: 0.5
+                }} 
+                 src={src} alt="" className="w-20 mx-auto" />
+              <motion.p
+               variants={varient2}
+               initial="hidden"
+               whileInView="visible"
+               transition={{
+                 type: 'spring',
+                 stiffness: 25,
+                 delay: 0.1, duration: 0.5
+               }}
+              className="mt-4">{title}</motion.p>
+              </div>
           ))}
         </div>
       </div>
