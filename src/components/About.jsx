@@ -47,7 +47,7 @@ const About = () => {
           <p
 
 
-            className="text-xl text-justify mt-8">
+            className="text-xl  font-roboto text-justify mt-8">
             Hello, I'm Parth Patel, a passionate web developer dedicated to crafting exceptional online experiences.
             With expertise in HTML, CSS, JavaScript, and React.js, my journey in web development has been marked by a commitment to
             transforming ideas into visually appealing and highly functional websites. I bring a blend of creativity and technical

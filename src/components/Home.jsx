@@ -56,7 +56,7 @@ const Home = () => {
                             stiffness: 30,
                             delay: 0.2,
                             duration: 1
-                        }} className="text-4xl sm:text-7xl font-bold text-white">
+                        }} className="text-4xl sm:text-7xl font-bold  text-white">
                         I'm a Web Developer
                     </motion.h2>
                     <p className="text-gray-500 py-4 max-w-md text-justify">
