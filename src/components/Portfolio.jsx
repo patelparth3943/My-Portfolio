@@ -42,11 +42,11 @@ const portvarient ={
 const varient2 ={
   hidden:{
     opacity:0,
-    x:50
+    y:50
   },
   visible:{
     opacity:1,
-    x:0,
+    y:0,
   }
 }
    return (
@@ -95,7 +95,7 @@ const varient2 ={
            transition={{
              type:'spring', 
              stiffness:30,
-           delay:0.3,duration:1}} className="flex py-5 justify-end ">
+           delay:0.5,duration:1}} className="flex py-5 justify-end ">
           <a
             href="https://github.com/patelparth3943?tab=repositories"
             target="_blank"
