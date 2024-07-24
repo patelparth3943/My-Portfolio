@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import {  Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 
-const NavBar = ({ showPreloader }) => {
+const NavBar = ({ setLoading }) => {
   const [nav, setNav] = useState(false);
 
   const links = [
@@ -17,16 +17,23 @@ const NavBar = ({ showPreloader }) => {
   const toggleNav = () => {
     setNav(!nav);
   };
-  
+
+  const handleH1Click = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Duration to show preloader
+  };
+
   const navvarient = {
     hidden: {
       opacity: 0,
-      y: -25
+      y: -25,
     },
     visible: {
       opacity: 1,
       y: 0,
-    }
+    },
   };
 
   const menuVars = {
@@ -54,17 +61,20 @@ const NavBar = ({ showPreloader }) => {
     <div className="flex justify-between items-center w-full h-20 px-4 text-white z-50 bg-black fixed">
       <div>
         <ScrollLink to="home" smooth duration={500} offset={-20}>
-          <motion.h1  
-          variants={navvarient}
-          initial="hidden"
-          animate="visible"
-          transition={{
-            type:'spring', 
-            stiffness:30,
-          delay:0.3,duration:1}}
-          
-          className="cursor-pointer text-5xl font-signature ml-2">
-         Parth<span className="text-blue-500">.</span>
+          <motion.h1
+            variants={navvarient}
+            initial="hidden"
+            animate="visible"
+            transition={{
+              type: 'spring',
+              stiffness: 30,
+              delay: 0.3,
+              duration: 1,
+            }}
+            className="cursor-pointer text-5xl font-signature ml-2"
+            onClick={handleH1Click}
+          >
+            Parth<span className="text-blue-500">.</span>
           </motion.h1>
         </ScrollLink>
       </div>
@@ -73,12 +83,13 @@ const NavBar = ({ showPreloader }) => {
           <motion.li
             variants={navvarient}
             initial="hidden"
-            animate="visible" 
+            animate="visible"
             key={id}
             transition={{
-              type: 'spring', 
+              type: 'spring',
               stiffness: 30,
-              delay: id * 0.2, duration: 1
+              delay: id * 0.2,
+              duration: 1,
             }}
             className="px-4 text-xl font-bold cursor-pointer capitalize text-gray-500 hover:text-blue-400 hover:scale-105 duration-200"
           >
@@ -98,7 +109,7 @@ const NavBar = ({ showPreloader }) => {
         </div>
 
         {nav && (
-          <motion.ul  
+          <motion.ul
             variants={menuVars}
             initial="initial"
             animate="animate"
@@ -110,12 +121,7 @@ const NavBar = ({ showPreloader }) => {
                 key={id}
                 className="cursor-pointer font-bold capitalize text-3xl"
               >
-                <ScrollLink
-                  onClick={toggleNav}
-                  to={link}
-                  smooth
-                  duration={500}
-                >
+                <ScrollLink onClick={toggleNav} to={link} smooth duration={500}>
                   {link}
                 </ScrollLink>
               </motion.li>

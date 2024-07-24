@@ -26,7 +26,7 @@ function App() {
         <Preloader />
       ) : (
         <>
-          <NavBar />
+          <NavBar setLoading={setLoading} />
           <Home />
           <About />
           <Portfolio />
