@@ -39,7 +39,16 @@ const portvarient ={
   },
   
 }
-    
+const varient2 ={
+  hidden:{
+    opacity:0,
+    x:50
+  },
+  visible:{
+    opacity:1,
+    x:0,
+  }
+}
    return (
     <div 
       name="portfolio"
@@ -79,7 +88,28 @@ const portvarient ={
             </motion.div>
           ))}
         </div>
+        <motion.div 
+           variants={varient2}
+           initial="hidden"
+           whileInView="visible"
+           transition={{
+             type:'spring', 
+             stiffness:30,
+           delay:0.3,duration:1}} className="flex py-5 justify-end ">
+          <a
+            href="https://github.com/patelparth3943?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group hover:scale-75 transition delay-200 duration-200   mt-3 font-bold text-xl text-white w-fit px-5 py-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer"
+          >
+            for more projects > > 
+            <span className="group-hover:animate-bounce duration-300">
+              {/* <MdOutlineArrowDownward size={25} className="ml-1" /> */}
+            </span>
+          </a>
+        </motion.div>
       </div>
+     
     </div>
   );
 };

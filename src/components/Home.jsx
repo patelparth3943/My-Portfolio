@@ -4,6 +4,8 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import emoji from "react-easy-emoji";
+import '../../src/index.css';
+
 
 
 
@@ -60,7 +62,7 @@ const Home = () => {
                         I'm a Web Developer
                     </motion.h2>
                     <p className="text-gray-500 py-4 max-w-md text-justify">
-                        <span classname="wave-emoji ">{emoji("👋")}</span> Hello, I'm Parth Patel. I love to work on web application using technologies like
+                        <span classname="wave-emoji wave">{emoji("👋")}</span> Hello, I'm Parth Patel. I love to work on web application using technologies like
                         React, Tailwindcss. My journey in web development has equipped me with expertise in
                         front-end technologies like HTML, CSS, and JavaScript.
                     </p>
@@ -90,7 +92,7 @@ const Home = () => {
                     <img
                         src={HeroImage}
                         alt="my profile"
-                        className="rounded-2xl mx-auto w-2/3 md:w-full"
+                        className="shape rounded-2xl mx-auto w-2/3 md:w-full"
                     />
                 </motion.div>
             </div>
